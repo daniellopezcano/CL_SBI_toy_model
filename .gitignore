@@ -1,0 +1,17 @@
+# Python / Jupyter clutter
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+sbi-logs/
+*.log
+.vscode/
+.DS_Store
+
+# Smoke-test (quick mode) runs: not part of the published results
+data/
+outputs/
+
+# Posterior samples are too large for GitHub (up to 126 MB each); regenerate with
+#   python -m clmini.sample_posteriors --kind pk   (and --kind latents)
+outputs/*/sbi_*/samples_*.npz
+outputs/*/sbi_*/chunks_*/

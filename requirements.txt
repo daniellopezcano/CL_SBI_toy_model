@@ -1,0 +1,19 @@
+# Exact versions used for the committed full-size run (conda env "CL_inference", Python 3.10.14).
+# The saved posteriors (outputs/full/sbi_*/posterior.pkl) and CL model (outputs/full/cl/model.pt) are
+# pickled torch/sbi objects: load them with these torch/sbi (and nflows/zuko) versions.
+#
+# Install PyTorch first from the CPU wheel index:
+#   pip install torch==2.5.1 --index-url https://download.pytorch.org/whl/cpu
+torch==2.5.1
+sbi==0.27.0
+nflows==0.14       # used by sbi's MAF
+zuko==1.6.0        # sbi dependency
+numpy==2.2.6
+scipy==1.15.2      # scipy.stats.qmc (Latin hypercube)
+matplotlib==3.9.1
+pandas==2.3.3      # metric tables in the notebooks
+tqdm==4.70.1
+notebook==7.6.3
+jupyterlab==4.6.4
+nbconvert==7.17.1  # run_pipeline.sh
+ipykernel==7.3.0
